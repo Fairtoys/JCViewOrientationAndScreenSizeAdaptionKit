@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/wangjunchao-hj@huajiao.tv/JCViewOrientationAndScreenSizeAdaptionKit'
+  s.homepage         = 'https://github.com/Fairtoys/JCViewOrientationAndScreenSizeAdaptionKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'wangjunchao-hj@huajiao.tv' => 'wangjunchao-hj@huajiao.tv' }
+  s.author           = { '313574889@qq.com' => '313574889@qq.com' }
   s.source           = { :git => 'https://github.com/Fairtoys/JCViewOrientationAndScreenSizeAdaptionKit.git', :tag => s.version.to_s, :submodules => true }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -33,10 +33,10 @@ TODO: Add long description of the pod here.
   s.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
   #s.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
   s.frameworks = 'UIKit'
   s.dependency 'Masonry'
-
+  s.swift_version = '3.0'
   s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCOrientationAndScreenSizeUtils/**/*'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCOrientationAndScreenSizeUtils/**/*.h'
