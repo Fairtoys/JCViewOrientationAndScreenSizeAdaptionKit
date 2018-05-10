@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wangjunchao-hj@huajiao.tv' => 'wangjunchao-hj@huajiao.tv' }
-  s.source           = { :git => 'https://github.com/wangjunchao-hj@huajiao.tv/JCViewOrientationAndScreenSizeAdaptionKit.git', :tag => s.version.to_s, :submodules => true }
+  s.source           = { :git => 'https://github.com/Fairtoys/JCViewOrientationAndScreenSizeAdaptionKit.git', :tag => s.version.to_s, :submodules => true }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
