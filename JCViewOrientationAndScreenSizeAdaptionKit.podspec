@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '313574889@qq.com' => '313574889@qq.com' }
-  s.source           = { :git => 'https://github.com/Fairtoys/JCViewOrientationAndScreenSizeAdaptionKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Fairtoys/JCViewOrientationAndScreenSizeAdaptionKit.git', :tag => s.version.to_s, :submodules => true }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -33,6 +33,26 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
   s.frameworks = 'UIKit'
-  s.dependency 'Masonry'
+  s.dependency 'Masonry' , '~> 1.0.0'
+  
+  s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCOrientationAndScreenSizeUtils/**/*'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCOrientationAndScreenSizeUtils/**/*.h'
+    ss.ios.frameworks = 'UIKit'
+  end
+  s.subspec 'JCViewMultipleLayout' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*.h'
+    ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
+  end
+  s.subspec 'JCViewMultipleLayout' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*.h'
+    ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
+  end
+
+
 
 end

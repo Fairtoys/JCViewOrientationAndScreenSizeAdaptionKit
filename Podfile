@@ -7,6 +7,6 @@ target 'JCViewOrientationAndScreenSizeAdaptionKit' do
 
   # Pods for JCViewOrientationAndScreenSizeAdaptionKit
 
-  pod 'Masonry'
+  pod 'Masonry' , '~> 1.1.0'
 
 end
