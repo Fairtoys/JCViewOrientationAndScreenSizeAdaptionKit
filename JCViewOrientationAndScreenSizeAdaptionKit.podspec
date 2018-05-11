@@ -35,15 +35,15 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.dependency 'Masonry', '~> 1.1.0'
   
-  # s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
-  #   ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.{h,m}'
-  #   ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.h'
-  #   ss.ios.frameworks = 'UIKit'
-  # end
-  # s.subspec 'JCViewMultipleLayout' do |ss|
-  #   ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.{h,m}'
-  #   ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.h'
-  #   ss.ios.frameworks = 'UIKit'
-  #   ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
-  # end
+  s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.h'
+    ss.ios.frameworks = 'UIKit'
+  end
+  s.subspec 'JCViewMultipleLayout' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.h'
+    ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
+  end
 end
