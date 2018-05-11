@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
   s.frameworks = 'UIKit'
-  s.dependency 'Masonry' , '~> 1.0.0'
+  s.dependency 'Masonry'
   
   s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCOrientationAndScreenSizeUtils/**/*'
@@ -46,13 +46,4 @@ Pod::Spec.new do |s|
     ss.ios.frameworks = 'UIKit'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
   end
-  s.subspec 'JCViewMultipleLayout' do |ss|
-    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*'
-    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/JCViewMultipleLayout/**/*.h'
-    ss.ios.frameworks = 'UIKit'
-    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
-  end
-
-
-
 end
