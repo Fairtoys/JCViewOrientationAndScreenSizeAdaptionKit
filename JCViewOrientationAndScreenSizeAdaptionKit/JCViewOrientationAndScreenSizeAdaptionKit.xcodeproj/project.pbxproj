@@ -28,7 +28,7 @@
 		02F988B020A56A8C006753DE /* JCPopupUtilsLayoutAndAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F9889C20A56A8C006753DE /* JCPopupUtilsLayoutAndAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F988B120A56A8C006753DE /* JCPopupUtilsLayoutAndAnimationSystemAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F9889D20A56A8C006753DE /* JCPopupUtilsLayoutAndAnimationSystemAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02F988DC20A57DEE006753DE /* JCViewOrientationAndScreenSizeAdaptionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 02F988DB20A57DEE006753DE /* JCViewOrientationAndScreenSizeAdaptionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D761BC594C0D405324DF0867 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE4674171205CAFA7981B56 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */; };
+		E17B5FE08FAF118B9DE8FA05 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F63F48A693FF70B33F7A54 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +54,9 @@
 		02F9889C20A56A8C006753DE /* JCPopupUtilsLayoutAndAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPopupUtilsLayoutAndAnimation.h; sourceTree = "<group>"; };
 		02F9889D20A56A8C006753DE /* JCPopupUtilsLayoutAndAnimationSystemAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCPopupUtilsLayoutAndAnimationSystemAlert.h; sourceTree = "<group>"; };
 		02F988DB20A57DEE006753DE /* JCViewOrientationAndScreenSizeAdaptionKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JCViewOrientationAndScreenSizeAdaptionKit.h; path = Framework/JCViewOrientationAndScreenSizeAdaptionKit.h; sourceTree = "<group>"; };
-		1F997B8FCCB50BBBE5D628A2 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKit/Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig"; sourceTree = "<group>"; };
-		327799C4496E72F169D3BEB8 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKit/Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig"; sourceTree = "<group>"; };
-		4CE4674171205CAFA7981B56 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCViewOrientationAndScreenSizeAdaptionKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE1F34A3837A0E46D0F6284 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig"; path = "../Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKit/Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig"; sourceTree = "<group>"; };
+		98670E29FC2A59B0B1888CE5 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKit/Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig"; sourceTree = "<group>"; };
+		D5F63F48A693FF70B33F7A54 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCViewOrientationAndScreenSizeAdaptionKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D761BC594C0D405324DF0867 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a in Frameworks */,
+				E17B5FE08FAF118B9DE8FA05 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +77,8 @@
 				02F9887920A543B4006753DE /* Supporting Files */,
 				02F987E120A3F785006753DE /* JCViewOrientationAndScreenSizeAdaptionKit */,
 				02F987E020A3F785006753DE /* Products */,
-				6A54E8BF0BD46B68D746CFF9 /* Pods */,
-				7066AAD843F799CF5A89B021 /* Frameworks */,
+				59D135F62F70448B540665B8 /* Pods */,
+				CF6EA89A83F8C333F6CC8274 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,19 +157,19 @@
 			name = JCPopupUtilsLayoutAndAnimationsBuildin;
 			sourceTree = "<group>";
 		};
-		6A54E8BF0BD46B68D746CFF9 /* Pods */ = {
+		59D135F62F70448B540665B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1F997B8FCCB50BBBE5D628A2 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */,
-				327799C4496E72F169D3BEB8 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */,
+				98670E29FC2A59B0B1888CE5 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */,
+				4AE1F34A3837A0E46D0F6284 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7066AAD843F799CF5A89B021 /* Frameworks */ = {
+		CF6EA89A83F8C333F6CC8274 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CE4674171205CAFA7981B56 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */,
+				D5F63F48A693FF70B33F7A54 /* libPods-JCViewOrientationAndScreenSizeAdaptionKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02F987E720A3F785006753DE /* Build configuration list for PBXNativeTarget "JCViewOrientationAndScreenSizeAdaptionKit" */;
 			buildPhases = (
-				BC28672D1D635DDA90D1961B /* [CP] Check Pods Manifest.lock */,
+				57B4D13F6CF97E6DB4C1A6B6 /* [CP] Check Pods Manifest.lock */,
 				02F987DA20A3F785006753DE /* Sources */,
 				02F987DB20A3F785006753DE /* Frameworks */,
 				02F987DC20A3F785006753DE /* Headers */,
@@ -262,7 +262,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC28672D1D635DDA90D1961B /* [CP] Check Pods Manifest.lock */ = {
+		57B4D13F6CF97E6DB4C1A6B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,7 +414,7 @@
 		};
 		02F987E820A3F785006753DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F997B8FCCB50BBBE5D628A2 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */;
+			baseConfigurationReference = 98670E29FC2A59B0B1888CE5 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -437,7 +437,7 @@
 		};
 		02F987E920A3F785006753DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 327799C4496E72F169D3BEB8 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */;
+			baseConfigurationReference = 4AE1F34A3837A0E46D0F6284 /* Pods-JCViewOrientationAndScreenSizeAdaptionKit.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

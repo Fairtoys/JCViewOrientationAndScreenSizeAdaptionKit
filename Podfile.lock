@@ -1,16 +1,36 @@
 PODS:
+  - JCViewOrientationAndScreenSizeAdaptionKit (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationsBuildin (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout (= 0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils
+    - Masonry
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationsBuildin (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils
   - Masonry (1.1.0)
 
 DEPENDENCIES:
-  - Masonry (~> 1.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit (from `./JCViewOrientationAndScreenSizeAdaptionKit`)
+  - Masonry
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
 
+EXTERNAL SOURCES:
+  JCViewOrientationAndScreenSizeAdaptionKit:
+    :path: "./JCViewOrientationAndScreenSizeAdaptionKit"
+
 SPEC CHECKSUMS:
+  JCViewOrientationAndScreenSizeAdaptionKit: 375a70047cbfb0c783f6b3debfde0a32ef7bdfef
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: c5187216adc806ece7ac15fb6828133ac6056833
+PODFILE CHECKSUM: 08bd7c9b7550e36495644db7f999fe39e6457dca
 
 COCOAPODS: 1.5.2

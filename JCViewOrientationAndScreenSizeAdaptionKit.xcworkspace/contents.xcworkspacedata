@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:JCViewOrientationAndScreenSizeAdaptionKit.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:JCViewOrientationAndScreenSizeAdaptionKitDemo/JCViewOrientationAndScreenSizeAdaptionKitDemo.xcodeproj">
    </FileRef>
 </Workspace>

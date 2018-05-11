@@ -1,12 +1,13 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '8.0'
+workspace 'JCViewOrientationAndScreenSizeAdaptionKit'
+inhibit_all_warnings!
 
 target 'JCViewOrientationAndScreenSizeAdaptionKit' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+	project 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit'
+	pod 'Masonry'
+end
 
-  # Pods for JCViewOrientationAndScreenSizeAdaptionKit
-
-  pod 'Masonry' , '~> 1.1.0'
-
+target 'JCViewOrientationAndScreenSizeAdaptionKitDemo' do
+	project 'JCViewOrientationAndScreenSizeAdaptionKitDemo/JCViewOrientationAndScreenSizeAdaptionKitDemo'
+	pod 'JCViewOrientationAndScreenSizeAdaptionKit', :path => './JCViewOrientationAndScreenSizeAdaptionKit'
 end
