@@ -27,23 +27,41 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/*'
-  #s.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/Classes/**/*'
-
-  s.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/*.h'
+  s.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
+  s.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewOrientationAndScreenSizeAdaptionKit.h'
   s.frameworks = 'UIKit'
-  s.dependency 'Masonry', '~> 1.1.0'
+
+  s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.h'
+    ss.ios.frameworks = 'UIKit'
+  end
   
   s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.{h,m}'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.h'
     ss.ios.frameworks = 'UIKit'
   end
+
   s.subspec 'JCViewMultipleLayout' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.{h,m}'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.h'
     ss.ios.frameworks = 'UIKit'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
+  end
+
+  s.subspec 'JCPopupUtils' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils+JCOrientationAndScreenSizeSupport.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimation.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils+JCOrientationAndScreenSizeSupport.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimation.h'
+    ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
+    ss.dependency 'Masonry'
+  end
+
+  s.subspec 'JCPopupUtilsLayoutAndAnimationsBuildin' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromBottom.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromRight.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationSystemAlert.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromBottom.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromRight.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationSystemAlert.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimations.h'
+    ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils'
   end
 end
