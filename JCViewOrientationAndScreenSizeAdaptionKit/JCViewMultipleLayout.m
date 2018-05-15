@@ -13,84 +13,53 @@
 
 @interface JCViewMultipleLayout ()
 
-@property (nonatomic, strong) JCStateStorage *stateStorage;
-
-@property (nonatomic, strong) NSMutableDictionary <id <NSCopying>, dispatch_block_t> *layoutsForState;
-
-@property (nonatomic, copy, nullable) dispatch_block_t layout;
+@property (nonatomic, strong) JCStateStorage <id <NSCopying>, dispatch_block_t> *stateStorage;
 
 @end
 
 @implementation JCViewMultipleLayout
 
-- (JCStateStorage *)stateStorage{
+- (JCStateStorage<id <NSCopying>, dispatch_block_t> *)stateStorage{
     if (!_stateStorage) {
         _stateStorage = [[JCStateStorage alloc] init];
+        [_stateStorage setOnValueDidSetBlock:^(JCStateStorage * _Nonnull theStateStorage) {
+            dispatch_block_t layout = theStateStorage.value;
+            if (layout) {
+                layout();
+            }
+        }];
     }
     return _stateStorage;
 }
 
-- (NSMutableDictionary<id<NSCopying>,dispatch_block_t> *)layoutsForState{
-    if (!_layoutsForState) {
-        _layoutsForState = [NSMutableDictionary dictionary];
-    }
-    return _layoutsForState;
-}
-
 - (void)setLayout:(dispatch_block_t)layout forState:(id<NSCopying>)state{
-    self.layoutsForState[state] = layout;
-    
-    [self setLayoutForState:self.state];
+    [self.stateStorage setValue:layout forState:state];
 }
 - (void)setLayout:(dispatch_block_t)layout forStateInt:(NSInteger)state{
     [self setLayout:layout forState:@(state)];
 }
 
 - (dispatch_block_t)layoutForState:(id<NSCopying>)state{
-    return self.layoutsForState[state];
+    return [self.stateStorage valueForState:state];
 }
 - (dispatch_block_t)layoutForStateInt:(NSInteger)state{
     return [self layoutForState:@(state)];
 }
 
 - (void)setLayoutNormal:(dispatch_block_t)layoutNormal{
-    if (!_state) {
-        _state = NSStringFromSelector(@selector(layoutNormal));
-    }
-    [self setLayout:layoutNormal forState:NSStringFromSelector(@selector(layoutNormal))];
+    [self.stateStorage setValueForDefault:layoutNormal];
 }
 
 - (dispatch_block_t)layoutNormal{
-    return [self layoutForState:NSStringFromSelector(_cmd)];
+    return self.stateStorage.valueForDefault;
 }
 
 - (void)setState:(id<NSCopying>)state{
-    if (_state == state) {
-        return ;
-    }
-    
-    _state = state;
-    
-    [self setLayoutForState:state];
+    [self.stateStorage setState:state];
 }
 
-- (void)setLayoutForState:(id <NSCopying>)state{
-    dispatch_block_t layout = [self layoutForState:state] ?: self.layoutNormal;
-    if (!layout) {
-        return ;
-    }
-    self.layout = layout;
-}
-
-- (void)setLayout:(dispatch_block_t)layout{
-    if (_layout == layout) {
-        return ;
-    }
-    _layout = layout;
-    
-    if (layout) {
-        layout();
-    }
+- (id<NSCopying>)state{
+    return self.stateStorage.state;
 }
 
 @end

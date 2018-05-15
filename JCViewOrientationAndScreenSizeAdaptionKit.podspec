@@ -36,6 +36,11 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.h'
     ss.ios.frameworks = 'UIKit'
   end
+   s.subspec 'JCStateStorage' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage*.{h,m}'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage*.h'
+    ss.ios.frameworks = 'Foundation'
+  end
   
   s.subspec 'JCOrientationAndScreenSizeUtils' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/UIDevice*.{h,m}'
@@ -47,6 +52,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.{h,m}'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout*.h'
     ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
   end
 
@@ -54,6 +60,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils+JCOrientationAndScreenSizeSupport.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimation.{h,m}'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils+JCOrientationAndScreenSizeSupport.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimation.h'
     ss.ios.frameworks = 'UIKit'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
     ss.dependency 'Masonry'
   end

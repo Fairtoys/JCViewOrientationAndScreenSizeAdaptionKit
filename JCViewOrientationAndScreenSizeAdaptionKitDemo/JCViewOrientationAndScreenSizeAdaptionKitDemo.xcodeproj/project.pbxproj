@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F9890320A59E96006753DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F9890220A59E96006753DE /* AppDelegate.m */; };
+		02F9890920A59E96006753DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F9890720A59E96006753DE /* Main.storyboard */; };
+		02F9890B20A59E96006753DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F9890A20A59E96006753DE /* Assets.xcassets */; };
+		02F9890E20A59E96006753DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F9890C20A59E96006753DE /* LaunchScreen.storyboard */; };
+		02F9891120A59E96006753DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F9891020A59E96006753DE /* main.m */; };
+		02F9891D20A5AB73006753DE /* MyViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F9891820A5AB73006753DE /* MyViewController1.m */; };
+		02F9891E20A5AB73006753DE /* MyViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F9891920A5AB73006753DE /* MyViewController1.xib */; };
+		02F9891F20A5AB73006753DE /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F9891B20A5AB73006753DE /* MyViewController.xib */; };
+		02F9892020A5AB73006753DE /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F9891C20A5AB73006753DE /* MyViewController.m */; };
+		02F9892320A5AB98006753DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F9892220A5AB98006753DE /* ViewController.m */; };
+		74B9E0292AD57971EE9517E2 /* libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC97538BC2EB9E828394E0C1 /* libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02F988FE20A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCViewOrientationAndScreenSizeAdaptionKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F9890120A59E96006753DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		02F9890220A59E96006753DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		02F9890820A59E96006753DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02F9890A20A59E96006753DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02F9890D20A59E96006753DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02F9890F20A59E96006753DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F9891020A59E96006753DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02F9891720A5AB72006753DE /* MyViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController1.h; sourceTree = "<group>"; };
+		02F9891820A5AB73006753DE /* MyViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController1.m; sourceTree = "<group>"; };
+		02F9891920A5AB73006753DE /* MyViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController1.xib; sourceTree = "<group>"; };
+		02F9891A20A5AB73006753DE /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		02F9891B20A5AB73006753DE /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		02F9891C20A5AB73006753DE /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		02F9892120A5AB98006753DE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../JCPopupContainerViewDemo/JCPopupContainerViewDemo/ViewController.h; sourceTree = "<group>"; };
+		02F9892220A5AB98006753DE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../JCPopupContainerViewDemo/JCPopupContainerViewDemo/ViewController.m; sourceTree = "<group>"; };
+		3CCC68D6667DC11D28B32A00 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo/Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AC97538BC2EB9E828394E0C1 /* libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A82B55A96883673D8502C6 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo/Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02F988FB20A59E96006753DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74B9E0292AD57971EE9517E2 /* libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02F988F520A59E96006753DE = {
+			isa = PBXGroup;
+			children = (
+				02F9890020A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo */,
+				02F988FF20A59E96006753DE /* Products */,
+				D936C406F5A3604E6AD08A39 /* Pods */,
+				AC89C8AA4DC616142011D880 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		02F988FF20A59E96006753DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02F988FE20A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02F9890020A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				02F9891A20A5AB73006753DE /* MyViewController.h */,
+				02F9891C20A5AB73006753DE /* MyViewController.m */,
+				02F9891B20A5AB73006753DE /* MyViewController.xib */,
+				02F9891720A5AB72006753DE /* MyViewController1.h */,
+				02F9891820A5AB73006753DE /* MyViewController1.m */,
+				02F9891920A5AB73006753DE /* MyViewController1.xib */,
+				02F9890120A59E96006753DE /* AppDelegate.h */,
+				02F9890220A59E96006753DE /* AppDelegate.m */,
+				02F9892120A5AB98006753DE /* ViewController.h */,
+				02F9892220A5AB98006753DE /* ViewController.m */,
+				02F9890720A59E96006753DE /* Main.storyboard */,
+				02F9890A20A59E96006753DE /* Assets.xcassets */,
+				02F9890C20A59E96006753DE /* LaunchScreen.storyboard */,
+				02F9890F20A59E96006753DE /* Info.plist */,
+				02F9891020A59E96006753DE /* main.m */,
+			);
+			path = JCViewOrientationAndScreenSizeAdaptionKitDemo;
+			sourceTree = "<group>";
+		};
+		AC89C8AA4DC616142011D880 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC97538BC2EB9E828394E0C1 /* libPods-JCViewOrientationAndScreenSizeAdaptionKitDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D936C406F5A3604E6AD08A39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CCC68D6667DC11D28B32A00 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.debug.xcconfig */,
+				B9A82B55A96883673D8502C6 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02F988FD20A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F9891420A59E96006753DE /* Build configuration list for PBXNativeTarget "JCViewOrientationAndScreenSizeAdaptionKitDemo" */;
+			buildPhases = (
+				4F04340697961E1BC1FA68CC /* [CP] Check Pods Manifest.lock */,
+				02F988FA20A59E96006753DE /* Sources */,
+				02F988FB20A59E96006753DE /* Frameworks */,
+				02F988FC20A59E96006753DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JCViewOrientationAndScreenSizeAdaptionKitDemo;
+			productName = JCViewOrientationAndScreenSizeAdaptionKitDemo;
+			productReference = 02F988FE20A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02F988F620A59E96006753DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Cerko;
+				TargetAttributes = {
+					02F988FD20A59E96006753DE = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 02F988F920A59E96006753DE /* Build configuration list for PBXProject "JCViewOrientationAndScreenSizeAdaptionKitDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02F988F520A59E96006753DE;
+			productRefGroup = 02F988FF20A59E96006753DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02F988FD20A59E96006753DE /* JCViewOrientationAndScreenSizeAdaptionKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02F988FC20A59E96006753DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F9891E20A5AB73006753DE /* MyViewController1.xib in Resources */,
+				02F9890E20A59E96006753DE /* LaunchScreen.storyboard in Resources */,
+				02F9890B20A59E96006753DE /* Assets.xcassets in Resources */,
+				02F9890920A59E96006753DE /* Main.storyboard in Resources */,
+				02F9891F20A5AB73006753DE /* MyViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F04340697961E1BC1FA68CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02F988FA20A59E96006753DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F9891D20A5AB73006753DE /* MyViewController1.m in Sources */,
+				02F9891120A59E96006753DE /* main.m in Sources */,
+				02F9890320A59E96006753DE /* AppDelegate.m in Sources */,
+				02F9892020A5AB73006753DE /* MyViewController.m in Sources */,
+				02F9892320A5AB98006753DE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02F9890720A59E96006753DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F9890820A59E96006753DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02F9890C20A59E96006753DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F9890D20A59E96006753DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02F9891220A59E96006753DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		02F9891320A59E96006753DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02F9891520A59E96006753DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CCC68D6667DC11D28B32A00 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48E3LB8PD7;
+				INFOPLIST_FILE = JCViewOrientationAndScreenSizeAdaptionKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cerko.JCViewOrientationAndScreenSizeAdaptionKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02F9891620A59E96006753DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A82B55A96883673D8502C6 /* Pods-JCViewOrientationAndScreenSizeAdaptionKitDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48E3LB8PD7;
+				INFOPLIST_FILE = JCViewOrientationAndScreenSizeAdaptionKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cerko.JCViewOrientationAndScreenSizeAdaptionKitDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02F988F920A59E96006753DE /* Build configuration list for PBXProject "JCViewOrientationAndScreenSizeAdaptionKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F9891220A59E96006753DE /* Debug */,
+				02F9891320A59E96006753DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02F9891420A59E96006753DE /* Build configuration list for PBXNativeTarget "JCViewOrientationAndScreenSizeAdaptionKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F9891520A59E96006753DE /* Debug */,
+				02F9891620A59E96006753DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02F988F620A59E96006753DE /* Project object */;
+}

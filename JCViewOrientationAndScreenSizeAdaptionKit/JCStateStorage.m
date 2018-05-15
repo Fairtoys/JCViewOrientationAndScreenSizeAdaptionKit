@@ -10,7 +10,7 @@
 
 @interface JCStateStorage ()
 @property (nonatomic, strong) NSMutableDictionary <id <NSCopying>, id> *valuesForState;
-@property (nonatomic, strong) id value;
+@property (nonatomic, strong, nullable) id value;
 @end
 
 
@@ -63,6 +63,17 @@
     _state = state;
     
     [self _setValueForState:state];
+}
+
+- (void)setValue:(id)value{
+    if (_value == value) {
+        return ;
+    }
+    _value = value;
+    
+    if (self.onValueDidSetBlock) {
+        self.onValueDidSetBlock(self);
+    }
 }
 
 @end

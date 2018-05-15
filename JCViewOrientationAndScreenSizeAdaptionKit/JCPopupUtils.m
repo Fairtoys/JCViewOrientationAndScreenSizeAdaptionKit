@@ -10,9 +10,11 @@
 #import "Masonry.h"
 #import <objc/runtime.h>
 #import "JCPopupUtilsLayoutAndAnimation.h"
+#import "JCStateStorage.h"
 
 @interface JCPopupUtils () <UIGestureRecognizerDelegate>
-@property (nonatomic, strong) NSMutableDictionary <id <NSCopying>, JCPopupUtilsLayoutAndAnimation *> *layoutAnimationsForState;
+
+@property (nonatomic, strong) JCStateStorage <id<NSCopying>, JCPopupUtilsLayoutAndAnimation*> *stateStorage;
 
 @property (nonatomic, strong) UIView *containerView;//整个大的容器
 @property (nonatomic, strong) UIView *backgroundView;//当view的大小不填满整个containerView时，用来设置背景色
@@ -25,62 +27,47 @@
 @property (nonatomic, copy, nullable) dispatch_block_t viewWillHideInnerBlock;
 @property (nonatomic, copy, nullable) dispatch_block_t viewDidHideInnerBlock;
 - (void)relayout;//会调用layoutAndAnimation中的layoutblock来重新布局
-@property (nonatomic, weak) JCPopupUtilsLayoutAndAnimation *layoutAndAnimation;//保存显示动画和隐藏动画,可继承此类来写自定义的布局和动画，然后设置此property, 或者给此类实现分类，来实现自定义布局和动画
+
 @end
 
 @implementation JCPopupUtils
 
-- (NSMutableDictionary<id <NSCopying> ,JCPopupUtilsLayoutAndAnimation *> *)layoutAnimationsForState{
-    if (!_layoutAnimationsForState) {
-        _layoutAnimationsForState = [NSMutableDictionary dictionary];
+- (JCStateStorage<id<NSCopying>,JCPopupUtilsLayoutAndAnimation *> *)stateStorage{
+    if (!_stateStorage) {
+        _stateStorage = [[JCStateStorage alloc] init];
+        __weak typeof(self) weakSelf = self;
+        [_stateStorage setOnValueDidSetBlock:^(JCStateStorage * _Nonnull theStateStorage) {
+             [weakSelf relayout];
+        }];
     }
-    return _layoutAnimationsForState;
+    return _stateStorage;
 }
 
 - (void)setLayoutAndAnimationNormal:(JCPopupUtilsLayoutAndAnimation *)layoutAndAnimationNormal{
     //如果当前状态没有，则设置默认状态
-    if (!_state) {
-        _state = NSStringFromSelector(@selector(layoutAndAnimationNormal));
-    }
-    [self setLayoutAndAnimation:layoutAndAnimationNormal forState:NSStringFromSelector(@selector(layoutAndAnimationNormal))];
+    [self.stateStorage setValueForDefault:layoutAndAnimationNormal];
 }
-
 - (JCPopupUtilsLayoutAndAnimation *)layoutAndAnimationNormal{
-    return [self layoutAndAnimationForState:NSStringFromSelector(_cmd)];
+    return self.stateStorage.valueForDefault;
 }
 
 - (void)setLayoutAndAnimation:(nullable __kindof JCPopupUtilsLayoutAndAnimation *)layoutAndAnimation forState:(id <NSCopying>)state{
-    self.layoutAnimationsForState[state] = layoutAndAnimation;
-    
-    [self layoutForState:self.state];
+    [self.stateStorage setValue:layoutAndAnimation forState:state];
 }
+
 - (void)setLayoutAndAnimation:(__kindof JCPopupUtilsLayoutAndAnimation *)layoutAndAnimation forStateInt:(NSInteger)state{
     [self setLayoutAndAnimation:layoutAndAnimation forState:@(state)];
 }
 
 - (nullable __kindof JCPopupUtilsLayoutAndAnimation *)layoutAndAnimationForState:(id <NSCopying>)state{
-    return self.layoutAnimationsForState[state];
+    return [self.stateStorage valueForState:state];
 }
 - (JCPopupUtilsLayoutAndAnimation *)layoutAndAnimationForStateInt:(NSInteger)state{
     return [self layoutAndAnimationForState:@(state)];
 }
 
 - (void)setState:(id<NSCopying>)state{
-    if (_state == state) {
-        return ;
-    }
-    _state = state;
-    
-    [self layoutForState:state];
-}
-
-- (void)layoutForState:(id <NSCopying>)state{
-    JCPopupUtilsLayoutAndAnimation *layoutAndAnimation = self.layoutAnimationsForState[state] ?: self.layoutAndAnimationNormal;
-    if (!layoutAndAnimation) {
-        return ;
-    }
-    
-    self.layoutAndAnimation = layoutAndAnimation;
+    self.stateStorage.state = state;
 }
 
 - (UIView *)containerView{
@@ -121,14 +108,10 @@
     return YES;
 }
 
-- (void)setLayoutAndAnimation:(__kindof JCPopupUtilsLayoutAndAnimation *)layoutAndAnimation{
-    if (_layoutAndAnimation == layoutAndAnimation) {
-        return ;
-    }
-    _layoutAndAnimation = layoutAndAnimation;
-    
-    [self relayout];
+- (JCPopupUtilsLayoutAndAnimation *)layoutAndAnimation{
+    return self.stateStorage.value;
 }
+
 
 - (void)onClickBackgroundView:(UITapGestureRecognizer *)sender{
     if (self.onClickBackgroundViewBlock) {
@@ -276,8 +259,8 @@
 
 - (void)relayout{
     if (_view.superview) {
-        if (_layoutAndAnimation.layoutBlock) {
-            _layoutAndAnimation.layoutBlock(self);
+        if (self.layoutAndAnimation.layoutBlock) {
+            self.layoutAndAnimation.layoutBlock(self);
         }
     }
 }

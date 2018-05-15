@@ -1,0 +1,39 @@
+PODS:
+  - JCViewOrientationAndScreenSizeAdaptionKit (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationsBuildin (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage (= 0.1.0)
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout (= 0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage
+    - Masonry
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationsBuildin (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage (0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - JCViewOrientationAndScreenSizeAdaptionKit (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+
+EXTERNAL SOURCES:
+  JCViewOrientationAndScreenSizeAdaptionKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JCViewOrientationAndScreenSizeAdaptionKit: 2a8de52d656c7794b17aeebdc8b438adbf448a57
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 776db06f147e84b66b6cfcac25d2ce74d901312d
+
+COCOAPODS: 1.5.2

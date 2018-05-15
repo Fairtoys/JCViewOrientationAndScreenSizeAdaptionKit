@@ -10,18 +10,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JCStateStorage : NSObject
+@class JCStateStorage;
 
-- (void)setValue:(id)value forState:(id <NSCopying>)state;
-- (void)setValue:(id)value forStateInt:(NSInteger)state;
+typedef void(^JCStateStorageBlock)(JCStateStorage *theStateStorage);
 
-- (nullable id)valueForState:(id <NSCopying>)state;
-- (nullable id)valueForStateInt:(NSInteger)state;
+@interface JCStateStorage <KeyType, ObjectType> : NSObject
 
-@property (nonatomic, copy, nullable) id valueForDefault;//默认值，如果该状态下没有对应的值，则会返回此对象
+- (void)setValue:(nullable ObjectType)value forState:(KeyType <NSCopying>)state;
+- (void)setValue:(nullable ObjectType)value forStateInt:(NSInteger)state;
 
-@property (nonatomic, strong, nullable) id <NSCopying> state;
-@property (nonatomic, readonly) id value;//当前状态对应的值
+- (nullable ObjectType)valueForState:(KeyType <NSCopying>)state;
+- (nullable ObjectType)valueForStateInt:(NSInteger)state;
+
+@property (nonatomic, copy, nullable) ObjectType valueForDefault;//默认值，如果该状态下没有对应的值，则会返回此对象
+
+@property (nonatomic, strong, nullable) KeyType <NSCopying> state;
+@property (nonatomic, readonly, nullable) ObjectType value;//当前状态对应的值
+
+@property (nonatomic, copy, nullable) JCStateStorageBlock onValueDidSetBlock;//当value设置的回调
 
 @end
 
