@@ -47,6 +47,10 @@
     [self setValue:valueForDefault forState:keyForDefault];
 }
 
+- (id)valueForDefault{
+    return [self valueForState:NSStringFromSelector(_cmd)];
+}
+
 - (void)_setValueForState:(id <NSCopying>)state{
     id value = [self valueForState:state] ?: self.valueForDefault;
     if (!value) {
