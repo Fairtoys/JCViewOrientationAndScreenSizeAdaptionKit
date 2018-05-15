@@ -59,7 +59,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'JCPopupUtilsLayoutAndAnimationsBuildin' do |ss|
-    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromBottom.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromRight.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationSystemAlert.{h,m}'
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromBottom.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromRight.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationSystemAlert.{h,m}', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimations.h'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromBottom.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationFromRight.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationSystemAlert.h', 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimations.h'
     ss.ios.frameworks = 'UIKit'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils'

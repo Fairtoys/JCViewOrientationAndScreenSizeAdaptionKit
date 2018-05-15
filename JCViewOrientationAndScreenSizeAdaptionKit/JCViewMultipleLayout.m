@@ -9,8 +9,11 @@
 #import "JCViewMultipleLayout.h"
 #import <objc/runtime.h>
 #import "UIDevice+JCOrientationAndScreenSizeUtils.h"
+#import "JCStateStorage.h"
 
 @interface JCViewMultipleLayout ()
+
+@property (nonatomic, strong) JCStateStorage *stateStorage;
 
 @property (nonatomic, strong) NSMutableDictionary <id <NSCopying>, dispatch_block_t> *layoutsForState;
 
@@ -19,6 +22,13 @@
 @end
 
 @implementation JCViewMultipleLayout
+
+- (JCStateStorage *)stateStorage{
+    if (!_stateStorage) {
+        _stateStorage = [[JCStateStorage alloc] init];
+    }
+    return _stateStorage;
+}
 
 - (NSMutableDictionary<id<NSCopying>,dispatch_block_t> *)layoutsForState{
     if (!_layoutsForState) {
