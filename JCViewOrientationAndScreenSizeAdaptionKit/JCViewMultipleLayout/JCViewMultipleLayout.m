@@ -22,7 +22,8 @@
 - (JCStateStorage<id <NSCopying>, dispatch_block_t> *)stateStorage{
     if (!_stateStorage) {
         _stateStorage = [[JCStateStorage alloc] init];
-        [_stateStorage setOnValueDidSetBlock:^(JCStateStorage * _Nonnull theStateStorage) {
+        [_stateStorage setOnValueDidSetBlock:^(JCStateStorage <id<NSCopying>, dispatch_block_t>* _Nonnull theStateStorage) {
+            
             dispatch_block_t layout = theStateStorage.value;
             if (layout) {
                 layout();

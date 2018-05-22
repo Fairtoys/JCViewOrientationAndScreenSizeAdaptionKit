@@ -26,8 +26,8 @@ typedef void(^JCStateStorageBlock)(JCStateStorage *theStateStorage);
 
 @property (nonatomic, strong, nullable) KeyType <NSCopying> state;
 @property (nonatomic, readonly, nullable) ObjectType value;//当前状态对应的值
-
-@property (nonatomic, copy, nullable) JCStateStorageBlock onValueDidSetBlock;//当value设置的回调
+@property (nonatomic, readonly, nullable) ObjectType lastValue;//上一个状态对应的值
+@property (nonatomic, copy, nullable) JCStateStorageBlock onValueDidSetBlock;
 
 @end
 

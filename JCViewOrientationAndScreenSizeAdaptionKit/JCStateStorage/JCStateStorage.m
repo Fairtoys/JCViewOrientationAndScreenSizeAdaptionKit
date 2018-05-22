@@ -73,6 +73,7 @@
     if (_value == value) {
         return ;
     }
+    _lastValue = _value;
     _value = value;
     
     if (self.onValueDidSetBlock) {
