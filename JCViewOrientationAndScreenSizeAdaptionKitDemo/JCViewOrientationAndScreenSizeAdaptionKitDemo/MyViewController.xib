@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,15 +39,24 @@
                         <action selector="onClickShowView:" destination="-1" eventType="touchUpInside" id="Joo-q1-Hjc"/>
                     </connections>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-T1-iQG">
+                    <rect key="frame" x="241" y="318" width="124" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="0.29803921570000003" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="lsn-2F-ie5" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2HZ-tH-G1z"/>
                 <constraint firstItem="swE-t6-1OI" firstAttribute="centerX" secondItem="lsn-2F-ie5" secondAttribute="centerX" id="4xb-5A-hRU"/>
                 <constraint firstItem="lsn-2F-ie5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5YO-8z-pO3"/>
+                <constraint firstItem="zP0-T1-iQG" firstAttribute="centerY" secondItem="lsn-2F-ie5" secondAttribute="centerY" id="ExW-Ib-aQN"/>
+                <constraint firstItem="zP0-T1-iQG" firstAttribute="leading" secondItem="lsn-2F-ie5" secondAttribute="trailing" constant="15" id="RhP-Ky-dzi"/>
                 <constraint firstItem="gEQ-bK-35t" firstAttribute="centerX" secondItem="lsn-2F-ie5" secondAttribute="centerX" id="VPC-oj-t5x"/>
                 <constraint firstItem="gEQ-bK-35t" firstAttribute="top" secondItem="lsn-2F-ie5" secondAttribute="bottom" constant="23" id="dDz-CK-pfu"/>
                 <constraint firstItem="lsn-2F-ie5" firstAttribute="top" secondItem="swE-t6-1OI" secondAttribute="bottom" constant="28" id="oVI-9D-etB"/>
+                <constraint firstAttribute="trailing" secondItem="zP0-T1-iQG" secondAttribute="trailing" constant="10" id="seo-7I-Czw"/>
             </constraints>
         </view>
     </objects>

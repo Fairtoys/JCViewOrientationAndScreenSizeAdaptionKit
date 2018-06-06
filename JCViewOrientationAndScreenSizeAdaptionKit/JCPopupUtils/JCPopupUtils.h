@@ -85,7 +85,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (JCPopupUtils)
 
-@property (nonatomic, strong) JCPopupUtils *popUtils;
+@property (nonatomic, strong) __kindof JCPopupUtils *popUtils;
 /**
  在此视图上显示一个View
 
@@ -112,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (JCPopupUtils)
 
-@property (nonatomic, readonly) JCPopupUtils *popUtils;
+@property (nonatomic, strong) __kindof JCPopupUtils *popUtils;
 /**
  在此视图上显示一个Controller，如果当前popUtils.isViewShowing 为YES ，则直接return了
  

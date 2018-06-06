@@ -1,12 +1,15 @@
 PODS:
   - JCViewOrientationAndScreenSizeAdaptionKit (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver (= 0.1.0)
     - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (= 0.1.0)
     - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (= 0.1.0)
     - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtilsLayoutAndAnimationsBuildin (= 0.1.0)
     - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage (= 0.1.0)
     - JCViewOrientationAndScreenSizeAdaptionKit/JCViewMultipleLayout (= 0.1.0)
+  - JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver (0.1.0)
   - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils (0.1.0)
   - JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils (0.1.0):
+    - JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver
     - JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils
     - JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage
     - Masonry
@@ -30,7 +33,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JCViewOrientationAndScreenSizeAdaptionKit: 535e80ba148c7f8af3fd701fec2e98dae833375e
+  JCViewOrientationAndScreenSizeAdaptionKit: e14d4c325129c6f3b3d7e203d4682585c7d6a26b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 776db06f147e84b66b6cfcac25d2ce74d901312d

@@ -36,10 +36,15 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils/*.h'
     ss.ios.frameworks = 'UIKit'
   end
-   s.subspec 'JCStateStorage' do |ss|
+  s.subspec 'JCStateStorage' do |ss|
     ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage/*'
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage/*.h'
     ss.ios.frameworks = 'Foundation'
+  end
+  s.subspec 'JCKeyboardObserver' do |ss|
+    ss.source_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver/*'
+    ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver/*.h'
+    ss.ios.frameworks = 'UIKit'
   end
 
   s.subspec 'JCViewMultipleLayout' do |ss|
@@ -55,6 +60,7 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'JCViewOrientationAndScreenSizeAdaptionKit/JCPopupUtils/*.h'
     ss.ios.frameworks = 'UIKit'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCStateStorage'
+    ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCKeyboardObserver'
     ss.dependency 'JCViewOrientationAndScreenSizeAdaptionKit/JCOrientationAndScreenSizeUtils'
     ss.dependency 'Masonry'
   end

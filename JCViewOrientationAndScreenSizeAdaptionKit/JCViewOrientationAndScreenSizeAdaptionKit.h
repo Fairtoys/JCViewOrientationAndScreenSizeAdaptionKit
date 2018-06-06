@@ -15,6 +15,7 @@
 #import "JCViewMultipleLayout+JCOrientationAndScreenSizeSupport.h"
 
 #import "JCPopupUtils.h"
+#import "JCPopupUtilsKeyboardSurpport.h"
 #import "JCPopupUtils+JCOrientationAndScreenSizeSupport.h"
 #import "JCPopupUtilsLayoutAndAnimation.h"
 

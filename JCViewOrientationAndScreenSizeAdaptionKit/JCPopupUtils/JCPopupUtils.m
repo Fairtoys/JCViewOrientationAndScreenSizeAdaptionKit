@@ -313,6 +313,9 @@
 
 @implementation UIViewController (JCPopupUtils)
 
+- (void)setPopUtils:(__kindof JCPopupUtils *)popUtils{
+    self.view.popUtils = popUtils;
+}
 - (JCPopupUtils *)popUtils{
     return self.view.popUtils;
 }
