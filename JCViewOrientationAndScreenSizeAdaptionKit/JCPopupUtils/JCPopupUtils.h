@@ -63,6 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showView:(UIView *)view inSuperView:(UIView *)superView viewWillShowBlock:(nullable dispatch_block_t)viewWillShowBlock viewDidShowBlock:(nullable dispatch_block_t)viewDidShowBlock;
 - (void)showView:(UIView *)view inSuperView:(UIView *)superView;
 
+- (void)showViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController viewWillShowBlock:(nullable dispatch_block_t)viewWillShowBlock viewDidShowBlock:(nullable dispatch_block_t)viewDidShowBlock;
+- (void)showViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController;
 
 /**
  隐藏当前已显示的视图，如果当前没有视图在显示中，则直接return
@@ -73,12 +75,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideViewWillHideBlock:(nullable dispatch_block_t)viewWillHideBlock viewDidHideBlock:(nullable dispatch_block_t)viewDidHideBlock;
 - (void)hideView;
 
+- (void)hideViewControllerWillHideBlock:(nullable dispatch_block_t)viewWillHideBlock viewDidHideBlock:(nullable dispatch_block_t)viewDidHideBlock;
+- (void)hideViewController;
+
 /**
 显示新的view之前，先隐藏当前正在显示的view
 
 @param view 要显示的新的view
 */
 - (void)hideLastViewAndShowView:(UIView *)view inSuperView:(UIView *)superView;
+- (void)hideLastViewControllerAndShowViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController;
 
 - (void)relayout;//强制使用当前的layout来调用布局block
 @end

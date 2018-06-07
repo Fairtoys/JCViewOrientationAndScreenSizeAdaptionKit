@@ -182,6 +182,34 @@
     [self showView:view inSuperView:superView viewWillShowBlock:NULL viewDidShowBlock:NULL];
 }
 
+- (void)showViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController viewWillShowBlock:(dispatch_block_t)viewWillShowBlock viewDidShowBlock:(dispatch_block_t)viewDidShowBlock{
+    if (self.isViewShowing) {
+        return ;
+    }
+    __weak typeof(self) weakSelf = self;
+    [self setViewWillShowInnerBlock:^{
+        [parentViewController addChildViewController:viewController];
+        weakSelf.viewWillShowInnerBlock = NULL;
+    }];
+    [self setViewDidShowInnerBlock:^{
+        [viewController didMoveToParentViewController:parentViewController];
+        weakSelf.viewDidShowInnerBlock = NULL;
+    }];
+    [self setViewWillHideInnerBlock:^{
+        [viewController willMoveToParentViewController:nil];
+        weakSelf.viewWillHideInnerBlock = NULL;
+    }];
+    [self setViewDidHideInnerBlock:^{
+        [viewController removeFromParentViewController];
+        weakSelf.viewDidHideInnerBlock = NULL;
+    }];
+    [self showView:viewController.view inSuperView:parentViewController.view viewWillShowBlock:viewWillShowBlock viewDidShowBlock:viewDidShowBlock];
+}
+
+- (void)showViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController{
+    [self showViewController:viewController inParentViewController:parentViewController viewWillShowBlock:NULL viewDidShowBlock:NULL];
+}
+
 - (void)hideViewWillHideBlock:(dispatch_block_t)viewWillHideBlock viewDidHideBlock:(dispatch_block_t)viewDidHideBlock{
     if (!self.isViewShowing) {
         return ;
@@ -244,6 +272,14 @@
     [self hideViewWillHideBlock:NULL viewDidHideBlock:NULL];
 }
 
+- (void)hideViewControllerWillHideBlock:(dispatch_block_t)viewWillHideBlock viewDidHideBlock:(dispatch_block_t)viewDidHideBlock{
+    [self hideViewWillHideBlock:viewWillHideBlock viewDidHideBlock:viewDidHideBlock];
+}
+
+- (void)hideViewController{
+    [self hideViewControllerWillHideBlock:NULL viewDidHideBlock:NULL];
+}
+
 - (void)hideLastViewAndShowView:(UIView *)view inSuperView:(UIView *)superView{
     dispatch_block_t block = ^{
         [self showView:view inSuperView:superView];
@@ -254,6 +290,18 @@
         return ;
     }
     
+    block();
+}
+
+- (void)hideLastViewControllerAndShowViewController:(UIViewController *)viewController inParentViewController:(UIViewController *)parentViewController{
+    dispatch_block_t block = ^(){
+        [self showViewController:viewController inParentViewController:parentViewController];
+    };
+    
+    if (self.isViewShowing) {
+        [self hideViewControllerWillHideBlock:NULL viewDidHideBlock:block];
+        return;
+    }
     block();
 }
 
@@ -320,51 +368,23 @@
     return self.view.popUtils;
 }
 - (void)poputils_showController:(UIViewController *)controller{
-    [self poputils_showController:controller viewWillShowBlock:NULL viewDidShowBlock:NULL];
+    [self.popUtils showViewController:controller inParentViewController:self];
 }
 
 - (void)poputils_showController:(UIViewController *)controller viewWillShowBlock:(dispatch_block_t)viewWillShowBlock viewDidShowBlock:(dispatch_block_t)viewDidShowBlock{
-    if (self.popUtils.isViewShowing) {
-        return ;
-    }
-    __weak typeof(self) weakSelf = self;
-    [self.popUtils setViewWillShowInnerBlock:^{
-        [weakSelf addChildViewController:controller];
-        weakSelf.popUtils.viewWillShowInnerBlock = NULL;
-    }];
-    [self.popUtils setViewDidShowInnerBlock:^{
-        [controller didMoveToParentViewController:weakSelf];
-        weakSelf.popUtils.viewDidShowInnerBlock = NULL;
-    }];
-    [self.popUtils setViewWillHideInnerBlock:^{
-        [controller willMoveToParentViewController:nil];
-        weakSelf.popUtils.viewWillHideInnerBlock = NULL;
-    }];
-    [self.popUtils setViewDidHideInnerBlock:^{
-        [controller removeFromParentViewController];
-        weakSelf.popUtils.viewDidHideInnerBlock = NULL;
-    }];
-    [self.view poputils_showView:controller.view viewWillShowBlock:viewWillShowBlock viewDidShowBlock:viewDidShowBlock];
+    [self.popUtils showViewController:controller inParentViewController:self viewWillShowBlock:viewWillShowBlock viewDidShowBlock:viewDidShowBlock];
 }
 
 - (void)poputils_hideController{
-    [self.view poputils_hideView];
+    [self.popUtils hideViewController];
 }
 
 - (void)poputils_hideControllerViewWillHideBlock:(dispatch_block_t)viewWillHideBlock viewDidHideBlock:(dispatch_block_t)viewDidHideBlock{
-    [self.view poputils_hideViewWillHideBlock:viewWillHideBlock viewDidHideBlock:viewDidHideBlock];
+    [self.popUtils hideViewControllerWillHideBlock:viewWillHideBlock viewDidHideBlock:viewDidHideBlock];
 }
 
 - (void)poputils_hideLastViewAndShowController:(UIViewController *)controller{
-    dispatch_block_t block = ^(){
-        [self poputils_showController:controller];
-    };
-    if (self.popUtils.isViewShowing) {
-        [self poputils_hideControllerViewWillHideBlock:NULL viewDidHideBlock:block];
-        return;
-    }
-    
-    block();
+    [self.popUtils hideLastViewControllerAndShowViewController:controller inParentViewController:self];
 }
 
 @end
